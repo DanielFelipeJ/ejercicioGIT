@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const inicio = ["unacadena",1000,9,1,10,500,1,10,20,true,false];
+    console.log("Cadena inicial: ")
+    console.log(inicio);
+    const resultado_filtrado = filtrarNumeros(inicio);
+    console.log("Cadena filtrada (solo numeros):");
+    console.log(resultado_filtrado);
+    const resultado_final = MayorAMenor(resultado_filtrado);
+    console.log("Resultado final (Mayor a menor):");
+    console.log(resultado_final);
+
+    function filtrarNumeros (arregloInicial){
+        let arregloFiltrado = [];
+        for (let i = 0; i<arregloInicial.length; i++){
+            if (!isNaN(arregloInicial[i]) && !(arregloInicial[i]===false || arregloInicial[i]===true)){
+                arregloFiltrado.push(arregloInicial[i]);
+            }
+        }
+        return arregloFiltrado;
+    }
+
+    function MayorAMenor (arregloEntrada){
+        let posicion = 0;
+        let aux = 0;
+        for(let i = 0; i<arregloEntrada.length-1; i++){
+            posicion = 0;
+            aux = arregloEntrada[i];
+            for (let j = i+1; j<arregloEntrada.length; j++){
+                if (aux<=arregloEntrada[j]){
+                    posicion = j;
+                    aux = arregloEntrada[j]
+                }
+            }
+            if (posicion !== 0){
+                arregloEntrada[posicion] = arregloEntrada[i];
+                arregloEntrada[i] = aux;
+            }
+
+        }
+        return arregloEntrada;
+    }
+</script>
+</body>
+</html>
