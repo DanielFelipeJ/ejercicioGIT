@@ -5,6 +5,30 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    let numeroDeElementos = 10;
+    let memoria = 0;
+    let memoriaaux = 0;
+    let temp = 0;
 
+    if (numeroDeElementos >= 0) {
+        for (let i = 0; i<numeroDeElementos; i++) {
+            if (memoria === 0) {
+                console.log(memoria);
+                memoria += 1;
+            }else if(memoria === 1 && memoriaaux === 0){
+                console.log(memoria)
+                memoriaaux = 1;
+            }else {
+                console.log(memoria);
+                temp = memoria;
+                memoria += memoriaaux;
+                memoriaaux = temp;
+            }
+        }
+    }else{
+        console.log("El numero de elementos no es valido")
+    }
+</script>
 </body>
 </html>
