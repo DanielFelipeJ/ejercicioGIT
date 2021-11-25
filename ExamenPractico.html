@@ -153,8 +153,64 @@
             console.log("Incrementar en 1 unidad el valor del numero1 no lo hace mayor o igual que numero 2")
         }
 
+        /* Ejercicio 3 */
 
+        console.log("Respuesta Ejercicio 3:");
 
+        function ParOImpar (numero) {
+            if(numero%2===0){
+                console.log("El numero es par");
+            }else{
+                console.log("El numero es impar");
+            }
+        }
+
+        ParOImpar(5);
+
+        /* Ejercicio 4*/
+
+        console.log("Respuesta Ejercicio 4:");
+
+        function Palindromo (cadena) {
+
+            function FiltrarEspacios(cadena){
+                let cadenaFiltrada = [];
+                cadena = cadena.toLowerCase();
+                for(let i = 0; i<cadena.length; i++){
+                    if (cadena[i] !== ' '){
+                        cadenaFiltrada.push(cadena[i]);
+                    }
+                }
+                return cadenaFiltrada;
+            }
+
+            function Respuesta(cadena){
+                let suma = 0;
+                if(cadena.length % 2 === 0){
+                    for (let i = 0; i< cadena.length/2; i++){
+                        console.log(cadena[i]+cadena[cadena.length-1-i]);
+                        if (cadena[i] === cadena[cadena.length-1-i]){
+                            suma +=1;
+                            console.log(suma);
+                        }
+                    }
+                    if (suma === cadena.length/2){
+                        console.log("Si es un palindromo");
+                    }else {
+                        console.log("No es un palindromo");
+                    }
+                } else{
+                    console.log("No es un palindromo");
+                }
+            }
+
+            let cadenaFiltrada = FiltrarEspacios(cadena);
+
+            Respuesta(cadenaFiltrada);
+        }
+
+        let cadena = "La ruta nos aporto otro paso natural";
+        Palindromo(cadena);
     </script>
 </body>
 </html>
