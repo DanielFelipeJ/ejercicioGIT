@@ -88,6 +88,7 @@
             calificar(){
                 for (let i = 0; i< this.estudiantes.length; i++){
                     this.estudiantes[i].calificacion = Math.random()*10;
+                    this.estudiantes[i].calificacion = this.estudiantes[i].calificacion.toFixed(2);
                 }
             }
 
@@ -123,12 +124,15 @@
         grupo1.calificar();
         grupo1.calcularPromedio();
         console.log("Grupo 1:");
+        console.log("El promedio de los estudiantes del grupo: "+ grupo1.promedio.toFixed(2));
         console.log("El profesor del Grupo 1 es:");
         grupo1.profesor.obtDetalles();
         console.log("Los estudiantes del Grupo 1: " );
         for (let i = 0 ; i< grupo1.estudiantes.length; i++){
             grupo1.estudiantes[i].obtDetalles()
         }
+
+
 
         /* Ejercicio 1 */
 
