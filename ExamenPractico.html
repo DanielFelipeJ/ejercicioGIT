@@ -120,14 +120,14 @@
         let profesor1 = new Profesor("Alex", 40);
 
         let grupo1 = new Grupo(profesor1, estudiantes);
-        debugger;
         grupo1.calificar();
         grupo1.calcularPromedio();
         console.log("Grupo 1:");
-        console.log("El profesor del Grupo 1 es:" + grupo1.profesor.nombre);
+        console.log("El profesor del Grupo 1 es:");
+        grupo1.profesor.obtDetalles();
         console.log("Los estudiantes del Grupo 1: " );
         for (let i = 0 ; i< grupo1.estudiantes.length; i++){
-            console.log(grupo1.estudiantes[i].obtDetalles());
+            grupo1.estudiantes[i].obtDetalles()
         }
 
         /* Ejercicio 1 */
@@ -188,10 +188,8 @@
                 let suma = 0;
                 if(cadena.length % 2 === 0){
                     for (let i = 0; i< cadena.length/2; i++){
-                        console.log(cadena[i]+cadena[cadena.length-1-i]);
                         if (cadena[i] === cadena[cadena.length-1-i]){
                             suma +=1;
-                            console.log(suma);
                         }
                     }
                     if (suma === cadena.length/2){
