@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Examen practico</title>
+</head>
+<body>
+    <script>
+        /* Ejercicio 2 */
+
+        let n = 5;
+        factorialDeN = 1;
+
+        for (let i = 1; i <= n; i++) {
+            factorialDeN *= i;
+        }
+
+        console.log("Respuesta de ejercicio 2 (Factorial de "+n +"):");
+        console.log(factorialDeN);
+
+
+        /* Ejercicio 5 */
+
+        class Persona {
+            nombre;
+            edad;
+
+            constructor(nombre,edad) {
+                this.nombre = nombre;
+                this.edad = edad;
+            }
+
+            obtDetalles(){
+                console.log("Los datos de la Persona son:")
+                console.log("Nombre: " + this.nombre);
+                console.log("Edad: " + this.edad);
+            }
+        }
+    </script>
+</body>
+</html>
